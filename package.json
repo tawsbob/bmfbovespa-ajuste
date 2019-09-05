@@ -1,0 +1,38 @@
+{
+  "name": "bmfbovespa-ajuste",
+  "version": "1.0.0",
+  "description": "scrape table content of bmf bovespa assets",
+  "main": "./src/index.js",
+  "scripts": {
+    "prepare": "npm run prettier",
+    "prettier": "prettier --single-quote --trailing-comma es5 --no-semi --print-width 120 --write \"**/*.js\"",
+    "test": "node ./src/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tawsbob/bmfbovespa-ajuste.git"
+  },
+  "keywords": [
+    "ajuste",
+    "bmf",
+    "bovespa"
+  ],
+  "author": "Dellean Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tawsbob/bmfbovespa-ajuste/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier"
+    }
+  },
+  "homepage": "https://github.com/tawsbob/bmfbovespa-ajuste#readme",
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "puppeteer": "^1.19.0"
+  }
+}
