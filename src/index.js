@@ -13,7 +13,7 @@ module.exports = async params => {
   const browser = await puppeteer.launch({ headless })
   const pages = await browser.pages()
   const page = pages[0]
-  let list = []
+  let result = {}
 
   try {
     await page.setRequestInterception(true)
@@ -34,12 +34,12 @@ module.exports = async params => {
     await page.waitForSelector(selector)
     console.log('wait selector', selector)
 
-    list = await page.evaluate(evaluateScript(selector))
+    result = await page.evaluate(evaluateScript(selector))
     console.log('evaluate')
   } catch (e) {
     console.log(e)
   } finally {
     await browser.close()
-    return list
+    return result
   }
 }

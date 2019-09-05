@@ -1,4 +1,7 @@
 const script = selector => `
+function getDate(){
+  return document.querySelector('p.legenda').innerText.replace('Atualizado em: ', '').trim()
+}
 function getCode (asseName){
   return  asseName.split('-')[0].replace(/\t+|\s+/, '').trim()
 }
@@ -96,7 +99,10 @@ function start(selector){
   let vtc = []
   const allLines = document.querySelectorAll(selector)
   checkTR( allLines, 1, list, { rowspanCount, asset, vtc } )
-  return list
+  return {
+    date: getDate(),
+    list
+  }
 }
 
 start('${selector}')
