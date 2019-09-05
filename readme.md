@@ -2,6 +2,9 @@
 
 This module get daily assets adjustment from [Ajustes do pregão](http://www2.bmf.com.br/pages/portal/bmfbovespa/lumis/lum-ajustes-do-pregao-ptBR.asp)
 
+
+PT_BR: Desenvolvi esse módulo para facilitar a vida de quem precisa pegar a lista de todos os ajustes diários dos ativos da bolsa.
+
 # installation
 
 ```bash
