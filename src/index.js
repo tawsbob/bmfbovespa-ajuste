@@ -1,6 +1,6 @@
 const request = require('./request.js')
 const scrape = require('./scrape-script.js')
-const jsdom = require("jsdom")
+const jsdom = require('jsdom')
 const { JSDOM } = jsdom
 
 module.exports = async params => {
@@ -11,12 +11,10 @@ module.exports = async params => {
   const selector = params && params.selector ? params.selector : '#tblDadosAjustes tr'
 
   try {
+    const requestResult = await request({ url })
+    const { document } = new JSDOM(requestResult).window
 
-      const requestResult = await request({ url })
-      const { document }  = (new JSDOM(requestResult)).window
-
-      return scrape(document, selector)
-      
+    return scrape(document, selector)
   } catch (e) {
     console.warn(e)
     return e

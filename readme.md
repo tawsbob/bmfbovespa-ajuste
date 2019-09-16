@@ -37,11 +37,22 @@ const util = require('util')
             beforePrice: '2.761,8520',
             currentPrice: '2.765,3990',
             variation: '3,5470',
-            valueOfAjustPerContract: '124,14' }
+            valueOfAdjustmentPerContract: '124,14' }
             ...
          ]
 		...
 	]
   }
 
+```
+
+## <Promise>getAssetList({ url, selector })
+
+you can change default params if url of page or html change
+
+```javascript
+  getAssetList({
+    url: 'URL-OF-PAGE-TO-BE-SCRAPED', // default is 'http://www2.bmf.com.br/pages/portal/bmfbovespa/lumis/lum-ajustes-do-pregao-ptBR.asp'
+    selector: 'CSS-SELECTOR-OF-TRS-OF-TABLE' //default is '#tblDadosAjustes tr'
+  })
 ```
