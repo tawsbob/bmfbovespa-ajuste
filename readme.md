@@ -46,7 +46,7 @@ const util = require('util')
 
 ```
 
-## <Promise>getAssetList({ url, selector })
+## Promise => getAssetList({ url, selector })
 
 you can change default params if url of page or html change
 
