@@ -1,6 +1,6 @@
 {
   "name": "bmfbovespa-ajuste",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "scrape table content of bmf bovespa assets",
   "main": "./src/index.js",
   "scripts": {
